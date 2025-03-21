@@ -1,0 +1,18 @@
+.spline-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 200px);
+  margin-top: 80px;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spline-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 1500px;
+  max-height: 1200px;
+  outline: none;
+} 
