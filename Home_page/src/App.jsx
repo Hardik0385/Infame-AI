@@ -29,6 +29,11 @@ function App() {
           {/* Navigation */}
           <Navbar />
           
+          {/* Floating Phrase */}
+          <div className="floating-phrase">
+            <p>Viral or Valuable?</p>
+          </div>
+          
           {/* Main Content Area */}
           <div className="main-content">
             <h1>Welcome to InFame!</h1>

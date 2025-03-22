@@ -96,4 +96,47 @@
   100% {
     opacity: 1;
   }
-} 
+}
+
+.floating-phrase {
+  position: fixed;
+  left: 11rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  font-family: "Press Start 2P", system-ui;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  animation: fadeIn 2s ease-in-out, float 4s ease-in-out infinite;
+}
+
+.floating-phrase p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateY(-50%) translateY(-15px);
+  }
+  100% {
+    transform: translateY(-50%) translateY(0px);
+  }
+}

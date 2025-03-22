@@ -4,7 +4,9 @@ import './Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">InFame</div>
+      <div className="navbar-logo">
+        <img src="/logo_infame.png" alt="InFame Logo" className="logo-image" />
+      </div>
       <ul className="nav-list">
         <li className="nav-item">
           <a href="#" className="nav-link">Home</a>
@@ -23,4 +25,4 @@ function Navbar() {
   );
 }
 
-export default Navbar; 
+export default Navbar;
