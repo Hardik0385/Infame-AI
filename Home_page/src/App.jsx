@@ -1,37 +1,41 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import SplineScene from './components/SplineScene';
+import SplineScene from './components/SplineScene'
+import LandingPage from './components/LandingPage'
 
 function App() {
-  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [showLandingPage, setShowLandingPage] = useState(true);
 
-  // Handle sidebar visibility changes from the Navbar component
-  const handleSidebarVisibilityChange = (isVisible) => {
-    setSidebarVisible(isVisible);
+  const handleEnterMuseum = () => {
+    setShowLandingPage(false);
   };
 
   return (
     <>
-      {/* Video Background */}
-      <video className="video-background" autoPlay loop muted>
-        <source src="/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      
-      {/* Dark Overlay */}
-      <div className="overlay"></div>
-      
-      <div className="layout">
-        {/* Include the Navbar component and pass the visibility handler */}
-        <Navbar onSidebarVisibilityChange={handleSidebarVisibilityChange} />
-
-        {/* Main Content Area */}
-        <div className={`main-content ${sidebarVisible ? 'sidebar-visible' : ''}`}>
-          <h1>Welcome to InFrame</h1>
-          <SplineScene />
-        </div>
-      </div>
+      {showLandingPage ? (
+        <LandingPage onEnter={handleEnterMuseum} />
+      ) : (
+        <>
+          {/* Video Background */}
+          <video className="video-background" autoPlay loop muted>
+            <source src="/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Dark Overlay */}
+          <div className="overlay"></div>
+          
+          {/* Navigation */}
+          <Navbar />
+          
+          {/* Main Content Area */}
+          <div className="main-content">
+            <h1>Welcome to InFame!</h1>
+            <SplineScene />
+          </div>
+        </>
+      )}
     </>
   )
 }
