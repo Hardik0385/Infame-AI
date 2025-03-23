@@ -25,22 +25,25 @@ function Projects() {
       <h1>Our Projects</h1>
       
       <div className="projects-content">
-        <ProjectCard 
-          title="AI Content Analyzer" 
-          description="Advanced tool that uses natural language processing to evaluate content quality, potential engagement, and long-term value. It provides actionable insights to improve your content strategy."
-          imageUrl="/logo_mini.svg"
-          buttonText="View Project"
-          buttonLink="https://infamefinal.streamlit.app/"
-        />
+        <div className="project-item">
+          <h2 className="project-title">AI Rating System</h2>
+          <p className="project-description">
+            An advanced tool that uses natural language processing to evaluate content quality, potential engagement, and long-term value. It provides actionable insights to improve your content strategy.
+          </p>
+          <a href="https://infamefinal.streamlit.app/" target="_blank" rel="noopener noreferrer" className="project-btn-link">
+            <button className="project-btn">View Project</button>
+          </a>
+        </div>
         
-        <ProjectCard 
-          title="Our Project Personalized Guide" 
-          description="This is a project that guides you with whatever ai related queries you have for the first project."
-          imageUrl="/bot.svg"
-          buttonText="View Project"
-          buttonLink="https://infame-ai.streamlit.app/"
-          className="bot-image"
-        />
+        <div className="project-item">
+          <h2 className="project-title">Infame Project Chatbot</h2>
+          <p className="project-description">
+            Personal assistant chatbot that helps you with your project management tasks. It can provide you with project updates, deadlines, and other important information.
+          </p>
+          <a href="https://infame-ai.streamlit.app/" target="_blank" rel="noopener noreferrer" className="project-btn-link">
+            <button className="project-btn">View Project</button>
+          </a>
+        </div>
       </div>
     </div>
   );

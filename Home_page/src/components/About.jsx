@@ -52,13 +52,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="project-card">
-            <h3>Content Optimization Suite</h3>
-            <p>
-              A comprehensive set of AI-powered tools for optimizing headlines, images, video, and 
-              written content to maximize both immediate engagement and long-term value.
-            </p>
-          </div>
+          
         </div>
         
         <div className="about-section">
