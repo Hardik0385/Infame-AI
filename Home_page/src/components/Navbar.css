@@ -47,13 +47,16 @@
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   font-weight: 500;
   position: relative;
+  background-color: #000000;  /* Solid black background */
+  border: 1px solid #333;    /* Added border for better visibility */
 }
 
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #333333;  /* Darker grey on hover instead of transparent */
+  color: #ffffff;
 }
 
 /* Subtle animation for nav items */
