@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage'
 import Contact from './components/Contact'
 import About from './components/About'
 import Team from './components/Team'
+import Projects from './components/Projects'
 
 // Component to conditionally render the floating phrase based on the route
 function MainContent() {
@@ -32,7 +33,7 @@ function MainContent() {
             </>
           } />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<h1>Projects Page (Coming Soon)</h1>} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/Team" element={<Team />} />
           <Route path="*" element={<Navigate to="/" replace />} />
