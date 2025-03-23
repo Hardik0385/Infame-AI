@@ -101,14 +101,14 @@
 .floating-phrase {
   position: absolute;
   left: 11rem;
-  margin-top: 28%;
+  margin-top: 23%;
   transform: translateY(-50%);
   z-index: 20;
   font-family: "Press Start 2P", system-ui;
   color: white;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   white-space: nowrap;
-  animation: fadeIn 2s ease-in-out, floa 4s ease-in-out infinite;
+  animation: fadeIn 1s ease-in-out, float 4s ease-in-out infinite;
 }
 
 .floating-phrase p {
