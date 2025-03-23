@@ -44,17 +44,18 @@ function Contact() {
           <div className="contact-details">
             <div className="contact-item">
               <h3>Email</h3>
-              <p><a href="mailto:info@infame.ai">info@infame.ai</a></p>
+              <p><a href="mailto:info@infame.ai">ha9137@srmist.edu.in<br />ps826105@gmail.com</a></p>
             </div>
             
             <div className="contact-item">
               <h3>Phone</h3>
-              <p>+1 (555) 123-4567</p>
+              <p>+91 8269421920<br />
+                +91 9142116703</p>
             </div>
             
             <div className="contact-item">
               <h3>Address</h3>
-              <p>T Nagar<br />Chennai, Tamil Nadu 603203</p>
+              <p>S.R.M University<br />Chennai, Tamil Nadu 603203</p>
             </div>
           </div>
         </div>
