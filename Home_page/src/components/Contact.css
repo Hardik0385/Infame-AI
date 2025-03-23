@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -92,11 +94,13 @@
   background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 15px 30px;  /* Increased padding to accommodate the pixel font */
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 1px;
 }
 
 .submit-btn:hover {
@@ -114,4 +118,4 @@
     padding: 1rem;
     padding-top: 80px;
   }
-} 
+}

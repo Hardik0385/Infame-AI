@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -72,6 +74,34 @@
   line-height: 1.5;
 }
 
+.team-button-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.meet-team-button {
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.7rem;  /* Reduced font size for Press Start 2P */
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 1px;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.meet-team-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .about-container {
@@ -82,4 +112,9 @@
   .project-card {
     padding: 1rem;
   }
-} 
+
+  .meet-team-button {
+    padding: 1rem 2rem;
+    font-size: 0.6rem;
+  }
+}

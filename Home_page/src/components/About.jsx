@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './About.css';
 
-function About() {
+const About = () => {
+  const navigate = useNavigate();
+
+  const handleTeamClick = () => {
+    navigate('/Team');  
+  };
+
   return (
     <div className="about-container">
       <h1>About InFame AI</h1>
@@ -62,9 +69,15 @@ function About() {
             intelligence in the content space.
           </p>
         </div>
+
+        <div className="team-button-section">
+          <button className="meet-team-button" onClick={handleTeamClick}>
+            Meet Our Team
+          </button>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default About; 
+export default About;
