@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import SplineScene from './components/SplineScene'
 import LandingPage from './components/LandingPage'
 import Contact from './components/Contact'
+import About from './components/About'
 
 // Component to conditionally render the floating phrase based on the route
 function MainContent() {
@@ -31,7 +32,7 @@ function MainContent() {
           } />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<h1>Projects Page (Coming Soon)</h1>} />
-          <Route path="/about" element={<h1>About Page (Coming Soon)</h1>} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
