@@ -13,7 +13,7 @@ export default function SplineScene() {
     <div className="spline-container">
       {isLoading && <div className="loading">Loading 3D Scene...</div>}
       <Spline 
-        scene="https://prod.spline.design/HEdg7tIoJnkwpalY/scene.splinecode" 
+        scene="https://prod.spline.design/NLDIwWsnnDTCtMVV/scene.splinecode" 
         onLoad={handleLoad}
       />
     </div>
