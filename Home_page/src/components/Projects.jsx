@@ -28,7 +28,7 @@ function Projects() {
         <ProjectCard 
           title="AI Content Analyzer" 
           description="Advanced tool that uses natural language processing to evaluate content quality, potential engagement, and long-term value. It provides actionable insights to improve your content strategy."
-          imageUrl="/project1.jpg"
+          imageUrl="/logo_mini.svg"
           buttonText="View Project"
           buttonLink="https://infamefinal.streamlit.app/"
         />
@@ -36,13 +36,14 @@ function Projects() {
         <ProjectCard 
           title="Our Project Personalized Guide" 
           description="This is a project that guides you with whatever ai related queries you have for the first project."
-          imageUrl="/project2.jpg"
+          imageUrl="/bot.svg"
           buttonText="View Project"
           buttonLink="https://infame-ai.streamlit.app/"
+          className="bot-image"
         />
       </div>
     </div>
   );
 }
 
-export default Projects; 
+export default Projects;
