@@ -20,12 +20,12 @@ An AI-powered ranking system that distinguishes consistent achievers from short-
 1. Clone the repository:
 ```bash
 git clone https://github.com/Hardik0385/Infame-AI.git
-cd Infame-AI
+cd Infame-AI/Home_page
 ```
 
 2. Install dependencies:
 ```bash
-npm npm install @splinetool/react-spline @splinetool/runtime
+npm install @splinetool/react-spline @splinetool/runtime
 ```
 
 ## Contributing
