@@ -99,9 +99,9 @@
 }
 
 .floating-phrase {
-  position: fixed;
+  position: absolute;
   left: 11rem;
-  top: 50%;
+  margin-top: 28%;
   transform: translateY(-50%);
   z-index: 20;
   font-family: "Press Start 2P", system-ui;
