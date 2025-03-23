@@ -1,0 +1,55 @@
+2025-03-23 15:12:44,094 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:12:44,438 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:12:44,439 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:12:44,439 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:12:44,440 - __main__ - INFO - Initialization complete
+2025-03-23 15:13:01,366 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:13:01,368 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:13:01,368 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:13:01,384 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:13:01,384 - __main__ - INFO - Initialization complete
+2025-03-23 15:13:09,693 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:13:09,701 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:13:09,701 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:13:09,702 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:13:09,703 - __main__ - INFO - Initialization complete
+2025-03-23 15:13:17,356 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:13:17,361 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:13:17,361 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:13:17,361 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:13:17,361 - __main__ - INFO - Initialization complete
+2025-03-23 15:13:36,472 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:13:36,479 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:13:36,479 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:13:36,481 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:13:36,483 - __main__ - INFO - Initialization complete
+2025-03-23 15:13:50,365 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:13:50,372 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:13:50,373 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:13:50,373 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:13:50,373 - __main__ - INFO - Initialization complete
+2025-03-23 15:14:02,222 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:14:02,229 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:14:02,229 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:14:02,229 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:14:02,229 - __main__ - INFO - Initialization complete
+2025-03-23 15:14:06,919 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:14:06,925 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:14:06,925 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:14:06,926 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:14:06,926 - __main__ - INFO - Initialization complete
+2025-03-23 15:14:19,532 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:14:19,539 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:14:19,540 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:14:19,540 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:14:19,541 - __main__ - INFO - Initialization complete
+2025-03-23 15:14:26,590 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:14:26,597 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:14:26,598 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:14:26,598 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:14:26,598 - __main__ - INFO - Initialization complete
+2025-03-23 15:14:31,950 - __main__ - WARNING - Redis server not available. Caching will be disabled.
+2025-03-23 15:14:31,957 - __main__ - INFO - Initializing InfluenceIQ application
+2025-03-23 15:14:31,958 - __main__ - INFO - Initializing G4F client...
+2025-03-23 15:14:31,958 - __main__ - INFO - G4F client initialized successfully
+2025-03-23 15:14:31,959 - __main__ - INFO - Initialization complete
