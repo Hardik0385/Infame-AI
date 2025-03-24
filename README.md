@@ -27,7 +27,10 @@ cd Infame-AI/Home_page
 ```bash
 npm install @splinetool/react-spline @splinetool/runtime
 ```
-
+3. Instructions to run:
+```
+npm run dev
+```
 ## Contributing
 
 1. Fork the repository
