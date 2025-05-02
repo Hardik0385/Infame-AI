@@ -45,7 +45,7 @@ const About = () => {
           </div>
           
           <div className="project-card">
-            <h3>Viral Value Predictor</h3>
+            <h3>Ai ChatBot</h3>
             <p>
               Our proprietary algorithm that goes beyond predicting virality to estimate the lasting 
               impact and value generation potential of content across different platforms and audiences.
