@@ -10,6 +10,12 @@
   justify-content: center;
   z-index: 1000;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.landing-container.loaded {
+  opacity: 1;
 }
 
 .landing-video-background {
@@ -20,6 +26,8 @@
   height: 100%;
   object-fit: cover;
   z-index: -2;
+  transform: scale(1.05);
+  filter: brightness(0.8) contrast(1.1) saturate(1.2);
 }
 
 .landing-overlay {
@@ -28,8 +36,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: radial-gradient(circle at center, rgba(10, 10, 30, 0.6) 0%, rgba(0, 0, 10, 0.8) 100%);
   z-index: -1;
+  backdrop-filter: blur(2px);
 }
 
 .landing-content {
@@ -39,53 +48,213 @@
   padding: 2rem;
   max-width: 800px;
   position: relative;
-  animation: fadeIn 1.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.landing-title-container,
+.landing-subtitle-container,
+.landing-button-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.landing-title-container.visible,
+.landing-subtitle-container.visible,
+.landing-button-container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .landing-title {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-  animation: glow 3s infinite alternate;
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 20px rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, #ffffff 0%, #667eea 50%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.title-underline {
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  margin: 0 auto;
+  border-radius: 3px;
+  animation: expandWidth 1.5s 1.2s forwards;
 }
 
 .landing-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 3rem;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin: 0;
   opacity: 0.9;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
 }
 
 .enter-button {
   font-family: "Press Start 2P", system-ui;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  background: rgba(102, 126, 234, 0.1);
   color: white;
-  margin-top: 20rem;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 500;
-  border-radius: 8px;
+  border-radius: 50px;
+  border: 2px solid rgba(102, 126, 234, 0.5);
   cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(102, 126, 234, 0.3);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.button-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
 .enter-button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(102, 126, 234, 0.2);
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.8);
+}
+
+.enter-button:hover .button-icon {
+  transform: translateX(5px);
 }
 
 .enter-button:active {
   transform: translateY(-2px);
 }
 
-/* Animations */
+.enter-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.enter-button:hover::before {
+  opacity: 0.2;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  animation: float 15s infinite ease-in-out;
+  opacity: 0;
+}
+
+.particle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+.particle:nth-child(3) { top: 30%; left: 20%; animation-delay: 2s; }
+.particle:nth-child(4) { top: 40%; left: 70%; animation-delay: 3s; }
+.particle:nth-child(5) { top: 50%; left: 30%; animation-delay: 4s; }
+.particle:nth-child(6) { top: 60%; left: 60%; animation-delay: 5s; }
+.particle:nth-child(7) { top: 70%; left: 40%; animation-delay: 6s; }
+.particle:nth-child(8) { top: 80%; left: 50%; animation-delay: 7s; }
+.particle:nth-child(9) { top: 90%; left: 10%; animation-delay: 8s; }
+.particle:nth-child(10) { top: 5%; left: 50%; animation-delay: 9s; }
+.particle:nth-child(11) { top: 15%; left: 90%; animation-delay: 10s; }
+.particle:nth-child(12) { top: 25%; left: 30%; animation-delay: 11s; }
+.particle:nth-child(13) { top: 35%; left: 80%; animation-delay: 12s; }
+.particle:nth-child(14) { top: 45%; left: 25%; animation-delay: 13s; }
+.particle:nth-child(15) { top: 55%; left: 85%; animation-delay: 14s; }
+.particle:nth-child(16) { top: 65%; left: 15%; animation-delay: 15s; }
+.particle:nth-child(17) { top: 75%; left: 75%; animation-delay: 16s; }
+.particle:nth-child(18) { top: 85%; left: 35%; animation-delay: 17s; }
+.particle:nth-child(19) { top: 95%; left: 65%; animation-delay: 18s; }
+.particle:nth-child(20) { top: 50%; left: 50%; animation-delay: 19s; }
+
+.corner-decoration {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.top-left {
+  top: 30px;
+  left: 30px;
+  border-top: 3px solid rgba(102, 126, 234, 0.6);
+  border-left: 3px solid rgba(102, 126, 234, 0.6);
+  border-top-left-radius: 10px;
+  animation: pulse 3s infinite alternate;
+}
+
+.top-right {
+  top: 30px;
+  right: 30px;
+  border-top: 3px solid rgba(118, 75, 162, 0.6);
+  border-right: 3px solid rgba(118, 75, 162, 0.6);
+  border-top-right-radius: 10px;
+  animation: pulse 3s 0.5s infinite alternate;
+}
+
+.bottom-left {
+  bottom: 30px;
+  left: 30px;
+  border-bottom: 3px solid rgba(118, 75, 162, 0.6);
+  border-left: 3px solid rgba(118, 75, 162, 0.6);
+  border-bottom-left-radius: 10px;
+  animation: pulse 3s 1s infinite alternate;
+}
+
+.bottom-right {
+  bottom: 30px;
+  right: 30px;
+  border-bottom: 3px solid rgba(102, 126, 234, 0.6);
+  border-right: 3px solid rgba(102, 126, 234, 0.6);
+  border-bottom-right-radius: 10px;
+  animation: pulse 3s 1.5s infinite alternate;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -98,12 +267,98 @@
 }
 
 @keyframes glow {
-  from {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-                 0 0 20px rgba(255, 255, 255, 0.3);
+  0% {
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.3),
+                 0 0 20px rgba(102, 126, 234, 0.3);
   }
-  to {
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
-                 0 0 30px rgba(255, 255, 255, 0.5);
+  100% {
+    text-shadow: 0 0 15px rgba(102, 126, 234, 0.5),
+                 0 0 30px rgba(102, 126, 234, 0.5);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.7; }
+}
+
+@media (max-width: 992px) {
+  .landing-title {
+    font-size: 3.5rem;
+  }
+  
+  .landing-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .corner-decoration {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 2.8rem;
+  }
+  
+  .landing-subtitle {
+    font-size: 1rem;
+  }
+  
+  .enter-button {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .corner-decoration {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .landing-title {
+    font-size: 2.2rem;
+  }
+  
+  .landing-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .enter-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .corner-decoration {
+    width: 40px;
+    height: 40px;
   }
 } 

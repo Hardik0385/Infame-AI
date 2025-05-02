@@ -18,6 +18,7 @@
     "@mui/material": "^7.0.2",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.80",
+    "framer-motion": "^12.9.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0"
